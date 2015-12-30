@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.schedule2);
+        Intent top = new Intent(this, Top.class);
+        startActivityForResult(top, 0);
 
         // Android6.0+ はパーミッションの要求が必要
         boolean execReqPermissions = requestAppPermissions();
@@ -55,45 +56,45 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-        @Override
-        public void onRequestPermissionsResult( int requestCode, String[] permissions, int[] grantResults) {
-            for (int grantResult : grantResults) {
-                if(grantResult == PackageManager.PERMISSION_DENIED) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setTitle("エラー");
-                    builder.setMessage("許可しなければアプリは動きません");
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            requestAppPermissions();
-                        }
-                    });
-                    builder.setCancelable(false);
-                    builder.show();
-                    return;
-                }
+    @Override
+    public void onRequestPermissionsResult( int requestCode, String[] permissions, int[] grantResults) {
+        for (int grantResult : grantResults) {
+            if(grantResult == PackageManager.PERMISSION_DENIED) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("エラー");
+                builder.setMessage("許可しなければアプリは動きません");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        requestAppPermissions();
+                    }
+                });
+                builder.setCancelable(false);
+                builder.show();
+                return;
+            }
+        }
+
+        // 承認が得られたらログインを開始
+        loginWithStoredCredentials();
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    private void loginWithStoredCredentials() {
+        kiiManager = KiiManager.getInstance(this);
+        kiiManager.loginWithStoredCredentials(new KiiManager.OnFinishActionListener() {
+            @Override
+            public void onSuccess() {
+                Log.d("loginWithSC", "success");
+                // TODO データのやり取りのサンプル
             }
 
-            // 承認が得られたらログインを開始
-            loginWithStoredCredentials();
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void loginWithStoredCredentials() {
-            kiiManager = KiiManager.getInstance(this);
-            kiiManager.loginWithStoredCredentials(new KiiManager.OnFinishActionListener() {
-                    @Override
-                    public void onSuccess() {
-                        Log.d("loginWithSC", "success");
-                        // TODO データのやり取りのサンプル
-                    }
-
-                    @Override
-                    public void onFail(Exception e){
-                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                    }
-            });
-        }
+            @Override
+            public void onFail(Exception e){
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 }
