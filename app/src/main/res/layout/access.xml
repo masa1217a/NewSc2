@@ -1,37 +1,171 @@
-<?xml version="1.0"?>
 
-    <RelativeLayout android:layout_height="fill_parent" android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent" android:layout_height="fill_parent">
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:layout_alignParentTop="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#2E7D32" android:textIsSelectable="false" android:textSize="60dp" android:id="@+id/text" android:text="ACCESS"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCESS"
+        android:id="@+id/text"
+        android:textSize="60dp"
+        android:textIsSelectable="false"
+        android:background="#2E7D32"
+        android:autoText="false"
+        android:textColor="#EEEEEE"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
 
-    <ScrollView android:layout_height="match_parent" android:layout_width="846dp" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:id="@+id/ScrollView1" android:layout_below="@+id/text" android:layout_alignParentBottom="true" android:fillViewport="false" android:layout_gravity="center|top" tools:context=".MainActivity" xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ScrollView1"
+        android:layout_width="846dp"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:layout_gravity="center|top"
+        android:fillViewport="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent" android:layout_height="fill_parent">
 
 
-    <RelativeLayout android:layout_height="fill_parent" android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:id="@+id/imageview8" android:layout_below="@+id/text17" android:src="@drawable/sc_map"/>
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:layout_alignParentTop="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text14" android:text="・東日本急行バス" android:layout_marginTop="40dp"/>
+        <ImageView
+            android:id="@+id/imageview8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sc_map"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text17" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text15" android:text="　「栗原市役所前」徒歩20分" android:layout_below="@+id/text14"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="・東日本急行バス"
+                android:id="@+id/text14"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text16" android:text="・JR東北本線「瀬峰駅」" android:layout_below="@+id/text15"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="　「栗原市役所前」徒歩20分"
+                android:id="@+id/text15"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text14"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text17" android:text=" 栗原市民バス栗原中央病院行" android:layout_below="@+id/text16"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="・JR東北本線「瀬峰駅」"
+            android:id="@+id/text16"
+            android:textSize="30dp"
+            android:background="#43A047"
+            android:autoText="false"
+            android:textColor="#EEEEEE"
+            android:layout_below="@+id/text15"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text18" android:text=" 「東北職業能大学校前」徒歩2分" android:layout_below="@+id/text16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   栗原市民バス栗原中央病院行"
+                android:id="@+id/text17"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text16"
+                android:layout_alignParentStart="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text19" android:text="・JR東北新幹線「くりこま高原駅」" android:layout_alignTop="@+id/imageview8"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   「東北職業能大学校前」徒歩2分"
+                android:id="@+id/text18"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text16"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text20" android:text="　車で約10分（約6km）" android:layout_below="@+id/text19"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="・JR東北新幹線「くりこま高原駅」"
+            android:id="@+id/text19"
+            android:textSize="30dp"
+            android:background="#43A047"
+            android:autoText="false"
+            android:textColor="#EEEEEE"
+                android:layout_alignTop="@+id/imageview8"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text21" android:text="・東北自動車道築館IC" android:layout_below="@+id/text20"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="　車で約10分（約6km）"
+                android:id="@+id/text20"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text19"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textColor="#EEEEEE" android:autoText="false" android:background="#43A047" android:textSize="30dp" android:id="@+id/text22" android:text="　車で約5分（約2km）" android:layout_below="@+id/text21"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="・東北自動車道築館IC"
+                android:id="@+id/text21"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text20"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="　車で約5分（約2km）"
+                android:id="@+id/text22"
+                android:textSize="30dp"
+                android:background="#43A047"
+                android:autoText="false"
+                android:textColor="#EEEEEE"
+                android:layout_below="@+id/text21"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
 
-</ScrollView>
-
-</RelativeLayout>
