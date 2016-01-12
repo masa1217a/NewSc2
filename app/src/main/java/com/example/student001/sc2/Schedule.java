@@ -155,7 +155,7 @@ public class Schedule extends ActionBarActivity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.schedule, container, false);
+            View rootView = inflater.inflate(R.layout.schedule2, container, false);
             return rootView;
         }
 
